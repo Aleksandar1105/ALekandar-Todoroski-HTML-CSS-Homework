@@ -1,0 +1,37 @@
+/* body {
+    position: relative;
+} */
+
+div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.one {
+    background-color: blue;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.two {
+    background-color: red;
+    position: relative;
+    bottom: 50px;
+    left: 500px;
+}
+
+.three {
+    background-color: green;
+    position: relative;
+    top: 100px;
+    left: 350px;
+}
+
+.four {
+    background-color: yellow;
+    position: relative;
+    bottom: 300px;
+    left: 600px;
+}

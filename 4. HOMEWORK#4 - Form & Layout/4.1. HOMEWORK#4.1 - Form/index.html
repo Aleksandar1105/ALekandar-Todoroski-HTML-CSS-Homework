@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Form</title>
+</head>
+
+<body>
+
+    <form action="" method="get">
+        <fieldset style="width: 600px">
+
+            <h1 style="text-align: center;"><u>Aleksandar's Lunch Special</u></h1>
+            <p style="text-align: center;">Monday through Friday</p>
+            <p style="text-align: center;"><b>11am - 3pm</b></p>
+            <p style="text-align: center;"><b>$9.95 </b><small>(plus tax)</small></p>
+
+            <!-- Order Information -->
+            <fieldset>
+                <legend><i>Order Information</i></legend>
+                <label for="text"><strong>Name</strong></label>
+                <br>
+                <input type="text" name="text" id="text" placeholder="name" required>
+                <br>
+                <label for="email"><strong>E-mail</strong></label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="example@example.com" required>
+                <br>
+                <label for="address"><strong>Address</strong></label>
+                <br>
+                <input type="text" name="address" id="address" placeholder="address">
+                <br>
+                <label for="phone"><strong>Contact Number</strong></label>
+                <br>
+                <input type="tel" name="phone" maxlength="12" id="phone" placeholder="+389 7x xxx xxx">
+                <br>
+                <input type="radio" name="orderTo" id="here" value="here">
+                <label for="here">Here</label>
+                <br>
+                <input type="radio" name="orderTo" id="toGo" value="toGo">
+                <label for="toGo">To Go</label>
+            </fieldset>
+
+            <!-- Sandwiches -->
+            <fieldset>
+                <legend><i>Sandwiches</i></legend>
+                <p style="margin-bottom: 0;"><b>Monday:</b></p>
+                <input type="radio" name="monday" id="tomatoMozzarella" value="tomatoMozzarella">
+                <label for="tomatoMozzarella">Tomato Mozzarella</label>
+                <br>
+                <input type="radio" name="monday" id="chickenSalad" value="chickenSalad">
+                <label for="chickenSalad">Chicken Salad</label>
+
+                <p style="margin-bottom: 0;"><b>Tuesday:</b></p>
+                <input type="radio" name="tuesday" id="greekSaladWrap" value="greekSaladWrap">
+                <label for="greekSaladWrap">Greek Salad Wrap</label>
+                <br>
+                <input type="radio" name="tuesday" id="totoWrap" value="totoWrap">
+                <label for="totoWrap">Toto Wrap</label>
+
+                <p style="margin-bottom: 0;"><b>Wednesday:</b></p>
+                <input type="radio" name="wednesday" id="redPepperHummus" value="redPepperHummus">
+                <label for="redPepperHummus">Red Pepper Hummus</label>
+                <br>
+                <input type="radio" name="wednesday" id="roastedTurkey" value="roastedTurkey">
+                <label for="roastedTurkey">Roasted Turkey</label>
+
+                <p style="margin-bottom: 0;"><b>Thursday:</b></p>
+                <input type="radio" name="thursday" id="CGHummusWrap" value="CGHummusWrap">
+                <label for="CGHummusWrap">Carrot-Ginger Hummus Wrap</label>
+                <br>
+                <input type="radio" name="thursday" id="eggSalad" value="eggSalad">
+                <label for="eggSalad">Egg Salad</label>
+
+                <p style="margin-bottom: 0;"><b>Friday:</b></p>
+                <input type="radio" name="friday" id="dadoWrap" value="dadoWrap">
+                <label for="dadoWrap">Dado Wrap</label>
+                <br>
+                <input type="radio" name="friday" id="tunaSalad" value="tunaSalad">
+                <label for="tunaSalad">Tuna Salad</label>
+                <hr>
+                <input type="checkbox" name="extra" id="extra1">
+                <label for="extra1">Gluten Free Bread small (<b>75 &cent;</b> extra)</label>
+            </fieldset>
+
+            <!-- Snack -->
+            <fieldset>
+                <legend><i>Snack</i></legend>
+                <p style="margin-bottom: 0;"><b>Snacks</b></p>
+                <input type="radio" name="snack" id="apple" value="apple">
+                <label for="apple">Apple</label>
+                <br>
+                <input type="radio" name="snack" id="banana" value="banana">
+                <label for="banana">Banana</label>
+                <br>
+                <input type="radio" name="snack" id="potatoChips" value="potatoChips">
+                <label for="potatoChips">Potato Chips</label>
+                <br>
+            </fieldset>
+
+            <!-- Drink -->
+            <fieldset>
+                <legend><i>Drink</i></legend>
+                <label for="drinks"><b>Regular Size Drink</b></label>
+                <br>
+                <select name="drinks" id="drinks">
+                    <option value="coffe">Coffe</option>
+                    <option value="icedCoffe">Iced Coffe</option>
+                    <option value="organicPeppermint">Organic Peppermint</option>
+                    <option value="hotSenchaGreenTea">Hot Sencha Green Tea</option>
+                    <option value="icedSenchaGreenTea">Iced Sencha Green Tea</option>
+                    <option value="hotKeemunBlackTea">Hot Keemun Black Tea</option>
+                    <option value="icedKeemunBlackTea">Iced Keemun Black Tea</option>
+                </select>
+                <br>
+                <label for="sugar">Sugar:</label>
+                <input type="range" name="sugar" id="sugar" min="0" max="5" value="1" step="1">
+                <hr>
+                <input type="checkbox" name="extra" id="extra2">
+                <label for="extra2"> Large Drink (<b>75 &cent;</b> extra)</label>
+                <br>
+                <input type="checkbox" name="extra" id="extra3">
+                <label for="extra3"> Any regular size Bubble Tea (<b>$1.50 </b>extra)</label>
+            </fieldset>
+            <br>
+
+            <label for="comments">Additional order:</label>
+            <br>
+            <textarea name="comments" id="comments" cols="30" rows="5"
+                placeholder="Place additional order here..."></textarea>
+            <br>
+
+            <!-- submit (place order) -->
+            <input style="margin: 0 auto;" type="submit" value="Place Order">
+            <br>
+            <br>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

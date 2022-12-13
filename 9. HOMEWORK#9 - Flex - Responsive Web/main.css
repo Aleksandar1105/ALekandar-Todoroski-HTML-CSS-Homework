@@ -1,0 +1,242 @@
+/* 
+- Make the header a flexbox container
+- Set the flex direction in the header so that the header-brand is on the right side
+- Make the navigation horizontal with flexbox
+- Use flexbox to position the <aside> on the right side, and the .hero-page section on the left
+- Add flexbox on the .hero-page section so the articles position next to each other
+- The header nav should not be seen on a mobile device
+- On mobile device the articles in the hero section should flow vertically
+- The footer should only be visible on mobile devices
+- Bonus: Add a background-image on the .hero-page section (hint: Use something from pexels or unsplash)
+(Do a bit of research to see how exactly this works, it can be tricky :D)
+- Bonus 2: Add other styles to the homework
+*/
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Signika:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-white: #ffffff;
+    --color-black: #2d3436;
+    --color-lightgrey: #dfe6e9;
+    --color-blue: #83acfe;
+    --color-lightblue: #bdb2ff;
+    --color-red: #fd5f6e;
+    --color-darkgreen: #005f73;
+    --color-lightgreen: #06d6a0;
+    --color-darkbrown: #370617;
+    --color-lightbrown: #f4a261;
+    --color-shadow: rgba(99, 110, 114, 0.15);
+    --color-shadow-2: rgba(78, 114, 128, 0.28);
+    --font-display: 'Josefin Sans', sans-serif;
+    --font-text: 'Signika', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--font-text);
+    color: var(--color-black);
+}
+
+/* HEADER */
+/* Make the header a flexbox container */
+/* Set the flex direction in the header so that the header-brand is on the right side */
+header {
+    background-color: var(--color-blue);
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+    font-family: var(--font-display);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 2px var(--color-shadow), 0px 1px 2px 2px var(--color-shadow);
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.header-brand {
+    padding: 1rem 3rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-right: 1rem;
+    text-transform: uppercase;
+}
+
+/* Make the navigation horizontal with flexbox */
+.header-nav ul {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.header-nav li {
+    list-style: none;
+    padding: 1rem 4rem;
+}
+
+.header-nav li:hover {
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+
+h1 {
+    text-align: center;
+    padding: 2rem 2rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+/* MAIN */
+/* Use flexbox to position the <aside> on the right side, and the .hero-page section on the left */
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2rem;
+    width: 100vw;
+    height: 70vh;
+}
+
+/* Add flexbox on the .hero-page section so the articles position next to each other */
+/* Bonus: Add a background-image on the .hero-page section (hint: Use something from pexels or unsplash)
+(Do a bit of research to see how exactly this works, it can be tricky :D) */
+section {
+    background-image: url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex: 9;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 2px var(--color-shadow), 0px 1px 2px 2px var(--color-shadow);
+    margin-right: 2rem;
+}
+
+.card {
+    flex: 1;
+    padding: 1rem;
+    text-align: justify;
+    margin: 1rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
+
+
+aside {
+    background-color: var(--color-lightgrey);
+    flex: 1;
+    padding: 1rem 2rem 1rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 2px var(--color-shadow), 0px 1px 2px 2px var(--color-shadow);
+}
+
+aside li {
+    list-style: none;
+    padding: 2rem 0;
+    font-weight: 750;
+}
+
+aside li:hover {
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+footer {
+    font-family: var(--font-display);
+    display: none;
+}
+
+
+/* MOBILE DEVICE */
+@media screen and (max-width: 600px) {
+
+    /* - The header nav should not be seen on a mobile device */
+    header {
+        display: unset;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-brand {
+        text-align: center;
+        background-color: var(--color-blue);
+        margin: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 3px 2px var(--color-shadow), 0px 1px 2px 2px var(--color-shadow);
+        height: 5rem;
+        margin-bottom: 0.5rem;
+
+    }
+
+    /* - The footer should only be visible on mobile devices */
+    footer {
+        font-size: 2rem;
+        /* background-color: var(--color-red); */
+        display: flex;
+        justify-content: center;
+        /* position: relative; */
+        /* bottom: 0; */
+    }
+
+    footer ul {
+        list-style: none;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer li {
+        /* background-color: var(--color-lightblue); */
+        padding: 1rem 4rem;
+    }
+
+    /* - On mobile device the articles in the hero section should flow vertically */
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Bonus 2: Add other styles to the homework */
+    main {
+        display: flex;
+        padding: 2rem;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    aside {
+        display: none;
+    }
+
+    html {
+        font-size: 50%;
+    }
+
+    .card {
+        padding: 1rem;
+        text-align: justify;
+    }
+}

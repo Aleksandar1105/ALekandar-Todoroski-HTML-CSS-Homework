@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+p,
+div {
+  font-size: 2rem;
+  width: 50%;
+}
+
+:root {
+  --color-black: #2d3436;
+  --color-white: #f5f5f5;
+  --color-primary: #6c5ce7;
+  --color-accent: #fdcb6e;
+  --color-danger: #d63031;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* What the code below does is, it selects the first div that is a direct child of the .c1 
+(or .c2) container. Very useful if you don't want to bother with thinking about class names. */
+
+.c1>div:nth-child(1) {
+  background-color: red;
+}
+
+.c2>div:nth-child(2) {
+  background-color: yellow;
+}
+
+.header-brand {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem;
+  width: 100%;
+}
+
+.header-nav>ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
+/* ==================================== MY CODE =================================== */
+.container div {
+  padding: 2rem 1em;
+  margin: 5rem 30rem;
+}
+
+.btn {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 6.5rem;
+}
+
+.c1>div:nth-child(1) {
+  border: 1px solid var(--color-black);
+  border-left: 3px dotted var(--color-accent);
+  border-right: 3px dotted var(--color-accent);
+}
+
+.c1>div:nth-child(2) {
+  border: 1px solid var(--color-danger);
+  border-top: 5px dashed var(--color-danger);
+  border-bottom: 5px ridge var(--color-danger);
+  border-radius: 2rem;
+}
+
+.c1>div:nth-child(3) {
+  border: 5px solid var(--color-primary);
+  border-top: 5px double var(--color-primary);
+  border-bottom: 5px ridge var(--color-danger);
+  border-bottom-right-radius: 2rem;
+  position: relative;
+  left: 80rem;
+  top: -45rem;
+}
+
+.c2>div:nth-child(1) {
+  border: 3px solid var(--color-danger);
+  border-right: 0.8rem dotted var(--color-accent);
+  border-top-right-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+}
+
+.c2>div:nth-child(2) {
+  border: 1rem double var(--color-primary);
+  border-top: 5px dashed var(--color-danger);
+  border-bottom: 5px ridge var(--color-danger);
+}
+
+.c2>div:nth-child(3) {
+  border: 2px dashed var(--color-danger);
+  border-top: 5px dotted var(--color-black);
+  border-bottom: 8px double var(--color-black);
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  margin: 0;
+  position: absolute;
+  top: 70rem;
+  left: 50rem;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3>div:nth-child(1) {
+  border: 3px dotted var(--color-accent);
+  border-top: 5px dashed var(--color-danger);
+}
+
+.c3>div:nth-child(2) {
+  border: 1rem double var(--color-primary);
+  border-radius: 2rem 0 2rem 0;
+  position: absolute;
+  margin: 0;
+  left: 110rem;
+  top: -20rem;
+}
+
+.c4 {
+  border: 5px double var(--color-black);
+  margin: 2rem auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/* ==================================== MY CODE =================================== */
+
+@media only screen and (max-width: 768px) {
+
+  div {
+    font-size: 2rem;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .container div {
+    padding: 2rem 1em;
+    margin: 1rem auto;
+  }
+
+  .c1>div:nth-child(1) {
+    margin-top: 10rem;
+  }
+
+  .c1>div:nth-child(3) {
+    border: 5px solid var(--color-primary);
+    border-top: 5px double var(--color-primary);
+    border-bottom: 5px ridge var(--color-danger);
+    border-bottom-right-radius: 2rem;
+    position: unset;
+  }
+
+  .c2>div:nth-child(3) {
+    border: 2px dashed var(--color-danger);
+    border-top: 5px dotted var(--color-black);
+    border-bottom: 8px double var(--color-black);
+    margin: 1rem auto;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    position: unset;
+  }
+
+  .c3 {
+    position: unset;
+  }
+
+  .c3>div:nth-child(2) {
+    border: 1rem double var(--color-primary);
+    border-radius: 2rem 0 2rem 0;
+    position: unset;
+    margin: 1rem auto;
+  }
+
+  .c4 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+/*
+- Add a padding to all container divs ///
+- Add margins between all container divs ///
+- Add margin top/bottom to the button  (use shorthand) ///
+- Add (different) borders to all containers. (note: all containers have two classes, 
+use that)///
+- Use relative positioning to displace the 3 <div> in the c1 container. Check out the :nth-child() 
+selector, I recommend using it but it's okay if you don't want to bother.///
+- Use absolute positioning to displace the 3 <div> in the c2 container, relative to 
+the ENTIRE document///
+- Use absolute positioning to to displace the 2 <div> in the c3 container, 
+relative to the PARENT div///
+- Use sticky positioning on the button///
+- Make the header sit fixed at the top when scrolling
+*/

@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-antiquewhite: antiquewhite;
+    --color-antiquewhite-2: rgb(250, 252, 233);
+    --color-whitesmoke: whitesmoke;
+    --color-lightgrey: lightgrey;
+    --color-white: white;
+    --color-darkgrey: rgb(153, 153, 153);
+    --color-black-primary: black;
+    --color-lightblue: #EAEFE9;
+    --color-yellow: #e9d45d;
+    --color-red: #E70503;
+    --color-blue: #4122b4;
+    --color-black: #131212;
+    --font-display: 'Open Sans', sans-serif;
+    --font-text: 'Raleway', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    font-size: 62.5%;
+    background-color: var(--color-darkgrey);
+}
+
+div {
+    /* border: 1px solid var(--color-yellow); */
+    background-color: var(--color-black-primary);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: var(--font-text);
+    font-weight: 700;
+}
+
+.container {
+    width: 80rem;
+    height: 80rem;
+    background-color: var(--color-black-primary);
+    grid-column: start / end;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 1.6rem;
+    /* padding: 1rem; */
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.one {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 4;
+    background-color: var(--color-lightblue);
+}
+
+.two {
+    grid-row: 1 / span 2;
+    grid-column: 5 / span 6;
+    background-color: var(--color-antiquewhite);
+}
+
+.three {
+    grid-row: 1 / span 2;
+    grid-column: 11 / span 5;
+    background-color: var(--color-yellow);
+}
+
+.four {
+    grid-row: 1 / span 12;
+    grid-column: 16 / span 1;
+    background-color: var(--color-whitesmoke);
+}
+
+.five {
+    grid-row: 3 / span 4;
+    grid-column: 1 / span 2;
+    background-color: var(--color-antiquewhite-2);
+}
+
+.six {
+    grid-row: 3 / span 8;
+    grid-column: 3 / span 8;
+    background-color: var(--color-red);
+    color: var(--color-lightgrey);
+}
+
+.seven {
+    grid-row: 3 / span 4;
+    grid-column: 11 / span 5;
+    background-color: var(--color-yellow);
+}
+
+.eight {
+    grid-row: 7 / span 6;
+    grid-column: 1 / span 2;
+    background-color: var(--color-lightblue);
+}
+
+.nine {
+    grid-row: 7 / span 4;
+    grid-column: 11 / span 3;
+    background-color: var(--color-lightgrey);
+}
+
+.ten {
+    grid-row: 7 / span 4;
+    grid-column: 14 / span 2;
+    background-color: var(--color-white);
+}
+
+.eleven {
+    grid-row: 13 / span 4;
+    grid-column: 1 / span 2;
+    background-color: var(--color-yellow);
+}
+
+.twelve {
+    grid-row: 11 / span 4;
+    grid-column: 3 / span 4;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.thirteen {
+    grid-row: 11 / span 2;
+    grid-column: 7 / span 4;
+    background-color: var(--color-lightgrey);
+}
+
+.fourteen {
+    grid-row: 11 / span 2;
+    grid-column: 11 / span 5;
+    background-color: var(--color-lightblue);
+}
+
+.fifteen {
+    grid-row: 13 / span 2;
+    grid-column: 7 / span 4;
+    background-color: var(--color-lightblue);
+}
+
+.sixteen {
+    grid-row: 13 / span 3;
+    grid-column: 11 / span 5;
+    background-color: var(--color-blue);
+    color: var(--color-antiquewhite);
+}
+
+.seventeen {
+    grid-row: 15 / span 2;
+    grid-column: 3 / span 4;
+    background-color: var(--color-lightgrey);
+}
+
+.eighteen {
+    grid-row: 15 / span 1;
+    grid-column: 7 / span 4;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.nineteen {
+    grid-row: 13 / span 4;
+    grid-column: 16 / span 1;
+    background-color: var(--color-red);
+    color: var(--color-lightgrey)
+}
+
+.twenty {
+    grid-row: 16 / span 1;
+    grid-column: 7 / span 9;
+    background-color: var(--color-lightgrey);
+}

@@ -1,0 +1,295 @@
+/* 
+- Import two fonts from google fonts. One should be a display font, one should be for the text.
+- Define 4 colors (--black, --white, --primary, --accent) in variables
+- Define the two font-families in variables (--font-display, --font-text)
+- Use font-display for all headings. Use font-text for everything else
+- Define separate font-sizes for all headings h1 to h4 (h1 should be larger than h2, etc)
+- Add font color to the nav links for all states. (regular a, :hover, :active) (use the variables)
+- Remove the list style from the navigation ul list
+- All elements with the class .card should have the primary color as background-color, 
+and accent color as font color
+- All paragraphs in the .primary-articles should have italic text (do NOT edit the HTML to achieve this :D )
+- All paragraphs in the .secondary-articles should have a font-weight of 700 (same here, do not edit the HTML)
+- Bonus: Add styling to the contact section and form
+*/
+
+/* Note: Keep the homework task comment above when sending the homework. 
+It helps with checking your homework. You can even use the comments
+to specify where a solution for a task is located in the document. You can delete this note. :D
+*/
+/* ********************************************************************************************************** */
+/* ********************************************************************************************************** */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* - Import two fonts from google fonts. One should be a display font, one should be for the text. */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* - Define 4 colors (--black, --white, --primary, --accent) in variables */
+/* - Define the two font-families in variables (--font-display, --font-text) */
+:root {
+    /* color variables */
+    --black: #000000;
+    --white: #ffffff;
+    --primary: #141A46;
+    --accent: #EC8B5E;
+
+    /* font variables */
+    --font-display: 'Open Sans', sans-serif;
+    --font-text: 'Raleway', sans-serif;
+
+    /* radius variables */
+    --radius-1: 0.2rem;
+    --radius-2: 0.5rem;
+}
+
+/* - Use font-display for all headings. Use font-text for everything else */
+html {
+    font-family: var(--font-text);
+    font-size: 62.5%;
+    background-color: dimgray;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+}
+
+/* - Define separate font-sizes for all headings h1 to h4 (h1 should be larger than h2, etc) */
+h1 {
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 2rem 2rem;
+    text-shadow: 0.2rem 0.2rem 0.3rem var(--primary);
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    text-shadow: 0.2rem 0.2rem 0.3rem var(--white);
+
+}
+
+h4 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+/* :::::NAV BAR START::::: */
+/* - Add font color to the nav links for all states. (regular a, :hover, :active) (use the variables) */
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 100ms ease-in;
+    font-size: 1.6rem;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+a:active {
+    color: var(--black);
+}
+
+
+/* - Remove the list style from the navigation ul list */
+.header-nav__list {
+    list-style: none;
+}
+
+/* :::::NAV BAR END::::: */
+
+/* :::::SECTION START::::: */
+/* - All elements with the class .card should have the primary color as background-color, 
+and accent color as font color */
+.card {
+    background-color: var(--primary);
+    color: var(--accent);
+    margin: 1rem;
+}
+
+/* - All paragraphs in the .primary-articles should have italic text (do NOT edit the HTML to achieve this :D ) */
+article.primary-card p {
+    font-style: italic;
+}
+
+/* - All paragraphs in the .secondary-articles should have a font-weight of 700 (same here, do not edit the HTML) */
+article.secondary-card p {
+    font-weight: 700;
+}
+
+/* *******bonus styling section and all elements inside section******* */
+p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem 0;
+    border-radius: var(--radius-2);
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* :::::SECTION END::::: */
+
+
+
+/* :::::BONUS STYLING::::: */
+header {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary);
+    padding: 1rem 0;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 0.2rem;
+    border-radius: var(--radius-2);
+    box-shadow: 0 0 1rem var(--black);
+}
+
+.header-brand {
+    font-size: 2rem;
+    margin-left: 3rem;
+    color: var(--white);
+}
+
+.header-brand span {
+    font-size: 2.5rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    margin-right: 5rem;
+    text-decoration: none;
+}
+
+.card>ol>li {
+    font-size: 1.4rem;
+    margin-left: 5rem;
+    line-height: 2rem;
+}
+
+.card>ol>li:last-child {
+    padding-bottom: 1rem;
+}
+
+.card>ol>li::marker {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* - Bonus: Add styling to the contact section and form */
+/* form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.form-group {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--font-display);
+}
+
+.form-group input[type="email"] {
+    display: block;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-2);
+    width: 60rem;
+    height: 4rem;
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--font-display);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+#message {
+    display: block;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-2);
+    width: 60rem;
+    height: 20rem;
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--font-display);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    resize: none;
+}
+
+button {
+    display: block;
+    align-self: center;
+    font-size: 2rem;
+    background-color: var(--primary);
+    color: var(--accent);
+    border: none;
+    outline: none;
+    border-radius: var(--radius-1);
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    cursor: pointer;
+    /* transition: 100ms ease-in; */
+}
+
+button:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-brand {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .header-brand span {
+        font-size: 2.5rem;
+        color: var(--accent);
+        font-weight: 700;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        text-decoration: none;
+        margin-right: 0;
+        margin-top: 0.5rem;
+    }
+}

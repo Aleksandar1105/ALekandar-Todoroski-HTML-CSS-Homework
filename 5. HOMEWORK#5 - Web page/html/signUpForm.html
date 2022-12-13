@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form action="" method="">
+        <fieldset>
+            <img width="350px" src="/assets/logo.png" alt="logo">
+            <hr>
+            <h1>Create your Account</h1>
+            <!-- <label for="firstName">First Name</label> -->
+            <input class="text" type="text" name="firstName" id="firstName" placeholder="First Name" required>
+            <br>
+            <!-- <label for="lastName">Last Name</label> -->
+            <input class="text" type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+            <br>
+            <label class="b-date" for="date">Birth Date:</label>
+            <br>
+            <input class="text" type="date" name="birthDate" id="date" placeholder="Birth Date" value="Birth Date"
+                required>
+            <!-- <label for="email">Email</label> -->
+            <input class="text" type="email" name="email" id="email" placeholder="Email Address" required>
+            <br>
+            <p class="gender">Gender:</p>
+            <input class="radio" type="radio" name="gender" id="male" required>
+            <label class="gender" for="male">Male</label>
+            <input class="radio" type="radio" name="gender" id="female" required>
+            <label class="gender" for="female">Female</label>
+            <br>
+            <!-- <label for="username">Username:</label> -->
+            <input class="text" type="text" name="username" id="username" placeholder="Username">
+            <br>
+            <!-- <label for="password">Password:</label> -->
+            <input class="text" type="password" name="password" id="password" placeholder="Password">
+            <br>
+            <p class="pass-forgot">Forgot password?</p>
+            <p class="pass-terms">By Signing Up, I agree to the <span class="span-terms">FUTURE OF CONSTRUCTION Privacy
+                    Statement</span><br>
+                and <span><b>Terms of
+                        Service</b></span>
+            </p>
+            <button>SIGN UP</button>
+            <hr class="bottom">
+            <div class="bth">
+                <a class="back-to-home" href="/html/index.html">Back to Home</a>
+            </div>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>

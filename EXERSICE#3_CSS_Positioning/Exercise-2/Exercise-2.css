@@ -1,0 +1,36 @@
+div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.one {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.two {
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.three {
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.four {
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}

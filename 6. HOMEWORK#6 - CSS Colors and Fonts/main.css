@@ -1,0 +1,324 @@
+/* 
+1. Import two fonts from google fonts. One should be a display font, the other should be something readable
+    like a sans-serif font.
+
+2. All headings (h1-h6) should use the display font.
+
+3. Everything else should use the other, readable font.
+
+4. Set the main font-size of the html (root) element so it's 10px
+
+5. Use rem to define the font-size of all headings (h1-h6), and the font-size of paragraphs.
+
+6. Add a background color the word Blog in the header brand
+
+7. Add a background color to all paragraphs that have the class .card-content
+
+8. Add a color to all paragraphs, regardless of the class
+
+9. Add specific styling only to sections of with the class .top-card
+
+10. Add a background-color and font-size to the <span> within the footer
+
+11. Add other custom styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #ffffff;
+    --blue-1: #3f87a6;
+    --blue-2: #8298b8;
+    --white-1: #e2e2e2de;
+    --white-2: #ebebeb;
+    --orange-1: #f69d3c;
+    --light-brown: #dab998;
+    --light-brown-2: #eae0d5;
+    --grey-1: #cfcfcf;
+    --dark-grey: #272727;
+    --p-color: #412f2f;
+}
+
+html {
+    font-family: serif;
+    font-size: 62.5%;
+}
+
+main {
+    background-color: var(--white-1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    word-spacing: 1rem;
+}
+
+h2 {
+    font-size: 4rem;
+    padding: 1.5rem 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+    letter-spacing: 0.2rem;
+}
+
+h3 {
+    font-size: 3rem;
+    padding: 1rem 1rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 2rem;
+    color: var(--p-color);
+    padding: 2rem;
+    text-indent: 5rem;
+    line-height: 2.5rem;
+    text-align: justify;
+    font-weight: 300;
+}
+
+p::first-letter {
+    font-size: 5rem;
+    color: var(--blue-1);
+}
+
+header {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2rem;
+    background: linear-gradient(0.25turn, var(--blue-1), var(--white-1), var(--orange-1));
+}
+
+header span {
+    background-color: var(--blue-1);
+}
+
+p.card-content {
+    background: linear-gradient(to bottom,
+            #f69d3c 0%,
+            #e2e2e2de 20%,
+            #e2e2e2de 60%,
+            #e2e2e2de 80%,
+            #3f87a6 100%);
+    border-radius: 1rem;
+    margin: 0 1rem;
+}
+
+hr {
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+    height: 0.1rem;
+    background: linear-gradient(to right, var(--grey-1), var(--dark-grey), var(--grey-1));
+}
+
+footer span {
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--blue-1);
+    border-radius: 1rem 0 1rem 0;
+    font-size: 1.2rem;
+    color: var(--white-1);
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    font-size: 2em;
+    text-shadow: 0 0 0.5rem var(--blue-1), 0 0 0.2em var(--blue-1);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem;
+    background: linear-gradient(0.75turn, var(--blue-1), var(--white-1), var(--orange-1));
+}
+
+/* :::::::::::::::: OTHER CUSTOM STYLES :::::::::::::::: */
+
+.top-posts {
+    padding: 1rem;
+    margin: 0 15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 1fr;
+    grid-template-areas:
+        "heading-2 heading-2"
+        "article-1 article-2";
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    row-gap: 5rem;
+}
+
+.top-posts>h2 {
+    grid-area: heading-2;
+    margin: 1rem;
+}
+
+article:nth-of-type(1) {
+    grid-area: article-1;
+    background-color: var(--white);
+    padding: 2rem 0;
+    margin: 1rem;
+    min-width: 50%;
+    max-width: 60rem;
+    text-align: center;
+}
+
+article:nth-of-type(2) {
+    grid-area: article-2;
+    background-color: var(--white);
+    padding: 2rem 0;
+    margin: 1rem;
+    min-width: 50%;
+    max-width: 60rem;
+    text-align: center;
+}
+
+.blog-posts {
+    padding: 1rem;
+    margin: 0 15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "article-3 article-4"
+        "article-5 article-5";
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    row-gap: 5rem;
+}
+
+.blog-posts>.card:nth-child(1) {
+    grid-area: article-3;
+    background-color: var(--white);
+    padding: 2rem 0;
+    margin: 1rem;
+    min-width: 50%;
+    max-width: 60rem;
+    text-align: center;
+}
+
+.blog-posts>.card:nth-child(2) {
+    grid-area: article-4;
+    background-color: var(--white);
+    padding: 2rem 0;
+    margin: 1rem;
+    min-width: 50%;
+    max-width: 60rem;
+    text-align: center;
+}
+
+.blog-posts>.card:nth-child(3) {
+    grid-area: article-5;
+    background-color: var(--white);
+    padding: 2rem 0;
+    margin: 1rem;
+    min-width: 50%;
+    max-width: 60rem;
+    text-align: center;
+    justify-self: center;
+}
+
+main>h2 {
+    margin: 1rem;
+    text-align: center;
+}
+
+.card, .top-card {
+    width: 50rem;
+    border: 1px solid var(--white-1);
+    border-radius: 1.5rem;
+    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+
+main>p {
+    margin: 1rem 5rem;
+}
+
+@media only screen and (max-width: 76.8rem) {
+    body {
+        background-color: var(--dark-grey);
+    }
+
+    .top-posts {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "heading-2"
+            "article-1"
+            "article-2";
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .blog-posts {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "article-3"
+            "article-4"
+            "article-5";
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        gap: 5rem 2rem;
+    }
+
+    .card, .top-card {
+        width: 45rem;
+        border: 1px solid var(--white-1);
+        border-radius: 1.5rem;
+        box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+        align-items: center;
+    }
+
+    h1 {
+
+        letter-spacing: normal;
+        word-spacing: normal;
+    }
+
+    h2 {
+        font-size: 4rem;
+        padding: 1.5rem 1rem;
+        font-weight: 700;
+        text-decoration: underline;
+        letter-spacing: normal;
+    }
+}
+
+@media only screen and (max-width: 32rem) {
+    body {
+        background-color: var(--light-brown);
+    }
+
+    html {
+        font-size: 32.5%;
+    }
+}
